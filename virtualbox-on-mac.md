@@ -84,19 +84,22 @@ private_key_path: "/path/to/ssh_private_key"
 key_path: "/path/to/ssh_public_key"
 
 # Kubernetes
-k8s_version: "1.9.8"
+k8s_version: "1.9.10"
 cluster_name: "cube"
 domain_name: "acornsoft.io"
 addons:
-  ingress: true
-  monitoring: true
-  logging: true
+  cm: true
+  km: false
 
-# (required) cocktail service
-cocktail: true
-# (required) if cocktail service true
-nfs_ip: "192.168.50.10"
-nfs_mountdir: "/nfs"
+# (optional) if nfs server available
+nfs_ip: "192.168.50.10"  -> nfs서버의 ip 기입
+nfs_mountdir: "/nfs"      -> nfs서버의 공유 디렉토리 경로 기입
+
+# (required) Prometheus Rule Language - en, ko, jp
+alertmsg_lang: ko
+
+# (required) The unique cluster id.
+cluster_id: "test-cluster"
 ```
 
 상기 항목에서 private\_key\_path  와 key\_path 는 각각 VM에 ssh key로 접속하기 위한 **private key와 public key로 반드시 절대 경로로 기입**한다. 이미 존재하는 경우에는 해당 경로를 기입하면 되고, 신규로 생성할 경우에는 아래 절차대로 실행하면 된다.
