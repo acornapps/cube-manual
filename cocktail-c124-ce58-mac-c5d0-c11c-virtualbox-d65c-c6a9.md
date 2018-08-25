@@ -25,30 +25,9 @@
 * 새로운 키 생성은 아래를 참조한다. 기존 키 사용과 마찬가지로 생성한 키는 'cube.yaml' 파일에 지정해야 한다.
 
 ```
-# ssh-keygen -t rsa
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/cloud/.ssh/id_rsa): /Desktop/cubetest/id_rsa
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /Users/cloud/git/cubedeploy/virtualbox/5/id_rsa.
-Your public key has been saved in /Users/cloud/git/cubedeploy/virtualbox/5/id_rsa.pub.
-The key fingerprint is:
-SHA256:liTKyW/l3eU9+mBzyksL0AKpYXRsvsQ793nWJiUgJC0 cloud@Clouds-MacBook-Pro.local
-The key's randomart image is:
-+---[RSA 2048]----+
-|     ....        |
-|    . .E.o       |
-|     o=o=        |
-|   o.oo*.o..     |
-|    =.. So... .  |
-|     . B oo. + o |
-|      o + o.o==o.|
-|     .     o=+Bo.|
-|            o*=. |
-+----[SHA256]-----+
-
-
-# ssh-add id_rsa (유저등록)
+# ssh-keygen -f /path/to/private_file -t rsa -N ''
+# ssh-copy-id -i /path/to/piublic_file {user_id}@ip
+# ssh-add /path/to/private_file
 ```
 
 5\) kubectl 다운로드 \(옵션\)
