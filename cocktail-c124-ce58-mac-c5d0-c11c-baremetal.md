@@ -19,27 +19,7 @@ Mac, linux 설치 PC에서 baremetal 장비에 Cocktail를 설치하는 과정�
 &lt; ssh key 신규 발급 방법 &gt;
 
 ```
-# ssh-keygen -t rsa
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/cloud/.ssh/id_rsa): /tmp/cubetest/id_rsa
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /tmp/cubetest/id_rsa.
-Your public key has been saved in /tmp/cubetest/id_rsa.pub.
-The key fingerprint is:
-SHA256:liTKyW/l3eU9+mBzyksL0AKpYXRsvsQ793nWJiUgJC0 cloud@Clouds-MacBook-Pro.local
-The key's randomart image is:
-+---[RSA 2048]----+
-|     ....        |
-|    . .E.o       |
-|     o=o=        |
-|   o.oo*.o..     |
-|    =.. So... .  |
-|     . B oo. + o |
-|      o + o.o==o.|
-|     .     o=+Bo.|
-|            o*=. |
-+----[SHA256]-----+
+# ssh-keygen -f /path/to/private_file -t rsa -N ''
 ```
 
 4\) ssh-key 복사
@@ -47,7 +27,7 @@ The key's randomart image is:
 설치 pc에서 각 서버\(baremetal 장비\)에 ssh로 접속할 수 있도록 앞서 발급한 ssh Public키를 각 서버에 복사한다.
 
 ```
-# ssh-copy-id -i id_rsa.pub root@ip
+# ssh-copy-id -i /path/to/public_file {user_id}@ip
 ```
 
 5\) 만약 NFS 서버가 별도로 없을 경우에 특정 노드에 NFS Server를 설치한다.
