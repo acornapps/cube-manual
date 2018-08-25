@@ -124,20 +124,23 @@ key_path: "/path/to/ssh_public_key"
 # (required) Data directory for docker, kubelet, etcd, log.
 data_dir: "/cocktail"
 
-# Kubernetes  -> 기본사항으로 변경하지 않음.
-k8s_version: "1.9.8"
+# Kubernetes
+k8s_version: "1.9.10"
 cluster_name: "cube"
 domain_name: "acornsoft.io"
 addons:
-  ingress: true
-  monitoring: true
-  logging: true
+  cm: true
+  km: false
 
-# (required) cocktail service
-cocktail: true
 # (optional) if nfs server available
 nfs_ip: "203.236.100.15"  -> nfs서버의 ip 기입
 nfs_mountdir: "/nfs"      -> nfs서버의 공유 디렉토리 경로 기입
+
+# (required) Prometheus Rule Language - en, ko, jp
+alertmsg_lang: ko
+
+# (required) The unique cluster id.
+cluster_id: "test-cluster"
 ```
 
 **4.cube.yaml 파일이 있는 경로에서 cube create 명령을 이용하여 실제 VM에 cocktail을 설치한다.**
