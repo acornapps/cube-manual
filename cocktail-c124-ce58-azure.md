@@ -126,27 +126,7 @@ cocktail: true
 &lt; ssh key 신규 발급 방법 &gt;
 
 ```
-# ssh-keygen -t rsa
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/cloud/.ssh/id_rsa): /tmp/cubetest/id_rsa
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /tmp/cubetest/id_rsa.
-Your public key has been saved in /tmp/cubetest/id_rsa.pub.
-The key fingerprint is:
-SHA256:liTKyW/l3eU9+mBzyksL0AKpYXRsvsQ793nWJiUgJC0 cloud@Clouds-MacBook-Pro.local
-The key's randomart image is:
-+---[RSA 2048]----+
-|     ....        |
-|    . .E.o       |
-|     o=o=        |
-|   o.oo*.o..     |
-|    =.. So... .  |
-|     . B oo. + o |
-|      o + o.o==o.|
-|     .     o=+Bo.|
-|            o*=. |
-+----[SHA256]-----+
+# ssh-keygen -f /path/to/private_file -t rsa -N ''
 ```
 
 4**.cube create 명령을 이용하여 cocktail을 설치한다.**
