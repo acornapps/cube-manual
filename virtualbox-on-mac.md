@@ -65,7 +65,7 @@ master_cpus: 4
 master_memory: 4096
 
 # (required) Worker node vcpu number
-worker_cpus: 1
+worker_cpus: 2
 
 # (required) Worker node memory size (MB)
 worker_memory: 2048
