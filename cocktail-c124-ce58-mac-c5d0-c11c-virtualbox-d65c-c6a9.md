@@ -26,7 +26,7 @@
 
 ```
 # ssh-keygen -f /path/to/private_file -t rsa -N ''
-# ssh-copy-id -i /path/to/piublic_file {user_id}@ip
+# ssh-copy-id -i /path/to/public_file {user_id}@ip
 # ssh-add /path/to/private_file
 ```
 
