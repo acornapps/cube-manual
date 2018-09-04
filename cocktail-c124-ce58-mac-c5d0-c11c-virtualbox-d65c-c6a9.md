@@ -26,6 +26,23 @@
 
 ```
 # ssh-keygen -f /path/to/private_file -t rsa -N ''
+Generating public/private rsa key pair.
+Your identification has been saved in /path/to/file.
+Your public key has been saved in /path/to/file.pub.
+The key fingerprint is:
+SHA256:D5aprMbBbJFUPo7gKgLFXH8WGHsXCpm8HCKSQXO8gDE cloud@Clouds-MacBook-Pro.local
+The key's randomart image is:
++---[RSA 2048]----+
+|E*...o+=. .      |
+|+=+ooo*o o .     |
+| .*o.+=o= .      |
+| o oooo= +       |
+|. .o... S        |
+|..  =. o o       |
+|+  o .o   .      |
+|o   o.           |
+|   ..            |
++----[SHA256]-----+
 # ssh-copy-id -i /path/to/public_file {user_id}@ip
 # ssh-add /path/to/private_file
 ```
